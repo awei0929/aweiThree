@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-css-modules",
+    "stylelint-config-rational-order"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin"
+  ],
+  "customSyntax": "postcss-less",
+  "rules": {
+    "no-empty-source": null,
+    "order/properties-order": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "at-rule-no-unknown": null,
+    "custom-property-no-missing-var-function": null,
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["host", "global"]
+      }
+    ]
+  },
+  "ignoreFiles": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "arco-design-reset.less"]
+}

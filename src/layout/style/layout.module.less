@@ -1,0 +1,83 @@
+@layout-max-width: 1100px;
+
+.layout {
+  width: 100%;
+  height: 100%;
+}
+
+.layoutNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  min-width: @layout-max-width;
+}
+
+.layoutSider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  box-sizing: border-box;
+  height: 100%;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-border);
+    content: '';
+  }
+
+  > :global(.arco-layout-sider-children) {
+    overflow-y: hidden;
+  }
+
+  .collapseBtn {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-3);
+    background-color: var(--color-fill-1);
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-fill-3);
+    }
+  }
+}
+
+.menuWrapper {
+  height: 100%;
+  overflow: auto;
+}
+
+.layoutContent {
+  box-sizing: border-box;
+  min-width: @layout-max-width;
+  min-height: 100vh;
+  background-color: var(--color-fill-2);
+  transition: padding-left 0.2s;
+
+  .rootContent {
+    padding: 10px 20px;
+  }
+}
+
+.spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+}
