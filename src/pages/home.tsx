@@ -74,16 +74,13 @@ function Test() {
         mesh.position.y = v;
       });
     const obj = {
-      color: '0xffffff',
+      color: 0xffffff,
     };
     gui
       .addColor(obj, 'color')
       .name('颜色')
       .onChange(v => {
-        material.color = new THREE.Color(obj.color);
-        console.log(`0x${obj.color.split('#')[1]}`);
-
-        mesh.position.y = v;
+        material.color.set(v);
       });
     gui.add(mesh.position, 'y', 0, 180).name('Y轴');
     gui.add(mesh.position, 'z', 0, 180).name('Z轴');

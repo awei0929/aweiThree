@@ -14,8 +14,8 @@ const service = axios.create({
 // Request interceptors
 service.interceptors.request.use(
   config => {
-    const token = localStorage.getItem('token');
-    // const token = '66668888';
+    // const token = localStorage.getItem('token');
+    const token = '66668888';
 
     // token
     if (token) {
@@ -31,11 +31,11 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     const res = response.data;
-    const { error } = res;
+    // const { error } = res;
 
-    if (error && error !== 0) {
-      return Promise.reject(res);
-    }
+    // if (error && error !== 0) {
+    //   return Promise.reject(res);
+    // }
 
     return res;
   },

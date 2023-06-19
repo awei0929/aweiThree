@@ -53,4 +53,18 @@ export const routes: RouteType[] = [
     componentPath: 'test.tsx',
     hidden: false,
   },
+  {
+    name: '圆',
+    key: 'circle',
+    icon: <IconGift />,
+    componentPath: 'circle.tsx',
+    hidden: false,
+  },
+  {
+    name: '点模型',
+    key: 'points',
+    icon: <IconGift />,
+    componentPath: 'points.tsx',
+    hidden: false,
+  },
 ];

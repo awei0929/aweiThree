@@ -6,14 +6,14 @@ import PageLayout from './layout/page-layout';
 import Login from './pages/login/login';
 import { useToken } from '@/hooks/useToken';
 import store from './redux';
-import { getAccountInfo } from '@/redux/actionCreators';
+// import { getAccountInfo } from '@/redux/actionCreators';
 
 function App() {
   const { isLogin } = useToken();
 
   useEffect(() => {
     if (isLogin) {
-      store.dispatch(getAccountInfo());
+      // store.dispatch(getAccountInfo());
     }
   }, []);
 
