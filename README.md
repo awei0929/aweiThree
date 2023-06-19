@@ -21,4 +21,4 @@ npm run dev
 6.webGL渲染器 WebGLrender
 7.动画 Animation
 8.音视 Audio
-9.控制器 Control
+9.控制器 Control  
