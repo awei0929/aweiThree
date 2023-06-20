@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min';
 import { Card } from '@arco-design/web-react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
+// 所有模型对象都有一个父类 Object3D
 export default function Circle() {
   const ref = React.useRef<HTMLDivElement>(null);
   const refDiv = React.useRef<HTMLDivElement>(null);
