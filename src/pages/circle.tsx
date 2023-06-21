@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min';
 import { Card } from '@arco-design/web-react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import sj from '@/assets/世界.png';
 
 // 所有模型对象都有一个父类 Object3D
 export default function Circle() {
@@ -22,10 +23,15 @@ export default function Circle() {
     // 创建一个场景
     const scene = new THREE.Scene();
     // 创建一个模型
-    const geometry = new THREE.SphereGeometry(50, 50, 50);
+    const geometry = new THREE.SphereGeometry(50, 64, 32);
+    // 创建一个纹理加载器对象
+    const loadTex = new THREE.TextureLoader();
+    // 贴图纹理贴图UV坐标范围 用于裁剪
+    const texture = loadTex.load(sj);
     const material = new THREE.MeshPhongMaterial({
-      color: 0x00ffff,
+      // color: 0x00ffff,
       specular: 0x111111,
+      map: texture,
     });
     const mesh = new THREE.Mesh(geometry, material);
     // 添加模型
