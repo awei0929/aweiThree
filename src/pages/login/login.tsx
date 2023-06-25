@@ -12,27 +12,28 @@ const Login = memo(() => {
   };
 
   const { token, extra } = getUrlQuery();
-  const getLoginAddress = async () => {
-    try {
-      const res = await AxiosGetSsoRedirect({ extra: extra || '' });
-      window.location.href = res.data.url;
-    } catch {
-      Notification.error({ title: '跳转地址失败', content: '' });
-    }
-  };
+  // const getLoginAddress = async () => {
+  //   try {
+  //     const res = await AxiosGetSsoRedirect({ extra: extra || '' });
+  //     window.location.href = res.data.url;
+  //   } catch {
+  //     Notification.error({ title: '跳转地址失败', content: '' });
+  //   }
+  // };
 
   // 获取登陆状态
   const init = async () => {
     if (token) {
-      const {
-        data: { token: auth },
-      } = await AxiosGetLoginSso({ token });
+      // const {
+      //   data: { token: auth },
+      // } = await AxiosGetLoginSso({ token });
 
-      localStorage.setItem('token', auth);
+      localStorage.setItem('token', '66668888');
       window.location.href = '/';
       return;
     }
-    getLoginAddress();
+    localStorage.setItem('token', '66668888');
+    // getLoginAddress();
   };
 
   useEffect(() => {
