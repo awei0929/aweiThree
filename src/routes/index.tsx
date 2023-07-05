@@ -67,4 +67,34 @@ export const routes: RouteType[] = [
     componentPath: 'points.tsx',
     hidden: false,
   },
+  {
+    name: 'UV动画',
+    key: 'animationUV',
+    icon: <IconGift />,
+    componentPath: 'animationUV.tsx',
+    hidden: false,
+  },
+  {
+    name: 'GLTF模型',
+    key: 'gltfModel',
+    icon: <IconGift />,
+    componentPath: 'gltfModel.tsx',
+    hidden: false,
+  },
+];
+export const routes2: RouteType[] = [
+  {
+    name: '欢迎页',
+    key: 'home',
+    icon: <IconGift />,
+    componentPath: 'home.tsx',
+    hidden: false,
+  },
+  {
+    name: '欢迎页',
+    key: 'myRouter',
+    icon: <IconGift />,
+    componentPath: 'myRouter.tsx',
+    hidden: false,
+  },
 ];

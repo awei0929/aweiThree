@@ -22,6 +22,8 @@ const { Title, Text } = Typography;
 
 enum MenuKey {
   LOGOUT = 'logout', // 登出
+  user1 = 'user1', // 登出
+  user2 = 'user2', // 登出
 }
 
 function Navbar() {
@@ -69,7 +71,7 @@ function Navbar() {
             heading={5}
             onClick={() => backHome}
           >
-            XXX业务后台
+            THREE
           </Title>
           {isEnviroment()}
         </Space>
@@ -89,6 +91,28 @@ function Navbar() {
                     }}
                   >
                     登出
+                  </Menu.Item>
+                  <Menu.Item
+                    key={MenuKey.user1}
+                    onClick={() => {
+                      store.dispatch({
+                        type: GlobalActionType.USER_TOGGLE,
+                        payload: 1,
+                      });
+                    }}
+                  >
+                    用户1
+                  </Menu.Item>
+                  <Menu.Item
+                    key={MenuKey.user2}
+                    onClick={() => {
+                      store.dispatch({
+                        type: GlobalActionType.USER_TOGGLE,
+                        payload: 2,
+                      });
+                    }}
+                  >
+                    用户2
                   </Menu.Item>
                 </Menu>
               }

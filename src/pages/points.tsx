@@ -178,6 +178,8 @@ export default function Circle() {
     return meshs;
   }
   function scene() {
+    // 创建网格地面
+    const gridHelper = new THREE.GridHelper(1000, 100, 0xff0000);
     // 克隆之后网格是独立单独的 材质和几何体 不操作的话 还是一样原来的
     const mesh = meshs2();
     const m2 = mesh.clone();
@@ -210,7 +212,7 @@ export default function Circle() {
     // 创建一个场景
     const scene = new THREE.Scene();
     // 添加组对象
-    scene.add(group);
+    scene.add(group, gridHelper);
     // 添模型
     // scene.add(mesh, m2, m3);
     // 创建一个光源

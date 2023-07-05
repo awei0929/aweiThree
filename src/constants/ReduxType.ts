@@ -7,4 +7,6 @@ export enum GlobalActionType {
   UPDATE_TOKEN = 'update-token',
   /** 账号登出 */
   LOGOUT = 'logout',
+  /** 用户1路由 */
+  USER_TOGGLE = 'user_toggle',
 }

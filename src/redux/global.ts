@@ -6,6 +6,7 @@ export interface GlobalState {
   settings?: typeof defaultSettings;
   token: string | undefined;
   userInfo: Partial<any>;
+  user: number;
 }
 
 export interface GlobalAction {
@@ -17,6 +18,7 @@ const initialState = {
   settings: defaultSettings,
   token: localStorage.getItem('token'),
   userInfo: {},
+  user: 1,
 };
 
 export default function (state = initialState, action: GlobalAction) {
@@ -52,6 +54,16 @@ export default function (state = initialState, action: GlobalAction) {
         token: undefined,
         appNo: undefined,
         userInfo: {},
+      };
+    }
+    case GlobalActionType.USER_TOGGLE: {
+      const { user } = action.payload;
+      console.log(user);
+
+      localStorage.setItem('user', user);
+      return {
+        ...state,
+        user,
       };
     }
     default:
