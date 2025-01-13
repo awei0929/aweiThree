@@ -6,7 +6,6 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-  const isBuild = mode !== 'dev';
 
   const VitePlugins = [
     react({
@@ -19,10 +18,7 @@ export default defineConfig(({ mode }) => {
       libList: [
         {
           libName: '@arco-design/web-react',
-          style: name =>
-            isBuild
-              ? `@arco-design/web-react/es/${name}/style/index.js`
-              : '@arco-design/web-react/dist/css/index.less', // 开发模式下全量引入css，减少因按需加载导致的 vite 进行多次编译进而影响正常开发流程
+          style: () => '@arco-design/web-react/dist/css/index.less', // 开发模式下全量引入css，减少因按需加载导致的 vite 进行多次编译进而影响正常开发流程
           camel2DashComponentName: false,
         },
       ],

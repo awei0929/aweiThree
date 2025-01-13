@@ -4,9 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode dev",
-    "build:test": "vite build --mode test",
-    "build:gray": "vite build --mode gray",
-    "build:prod": "vite build --mode prod",
+    "build": "vite build --mode test",
     "commit": "git-cz",
     "preview": "vite preview",
     "eslint": "eslint src/ --ext .ts,.tsx --fix --cache",
