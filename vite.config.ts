@@ -30,6 +30,7 @@ export default defineConfig(({ mode }) => {
   ];
 
   return {
+    base: '/aweiThree',
     resolve: {
       alias: [{ find: '@', replacement: path.resolve(__dirname, './src') }],
     },
