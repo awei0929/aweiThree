@@ -19,7 +19,7 @@
     "fix:prettier": "prettier --write \"**/*.{ts,js,tsx,jsx,css,less,json,yml,yaml,md,mdx}\" ",
     "prepare": "husky install"
   },
-  "homepage": "https://awei0929.github.io/magic",
+  "homepage": "https://awei0929.github.io/aweiThree",
   "dependencies": {
     "@arco-design/web-react": "^2.40.2",
     "@babel/plugin-proposal-optional-chaining": "^7.18.9",
