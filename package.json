@@ -19,11 +19,12 @@
     "fix:prettier": "prettier --write \"**/*.{ts,js,tsx,jsx,css,less,json,yml,yaml,md,mdx}\" ",
     "prepare": "husky install"
   },
+  "homepage": "https://awei0929.github.io/magic",
   "dependencies": {
     "@arco-design/web-react": "^2.40.2",
     "@babel/plugin-proposal-optional-chaining": "^7.18.9",
     "@bhb-frontend/admin-components": "^0.0.0-bata.1",
-    "@bhb-frontend/service-types": "0.0.1-beta.4",
+    "@bhb-frontend/service-types": "^0.0.1",
     "@bhb-frontend/utils": "^0.1.11",
     "@loadable/component": "^5.15.2",
     "@sentry/react": "^7.16.0",
